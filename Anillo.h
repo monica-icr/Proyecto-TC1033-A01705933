@@ -4,7 +4,7 @@ using namespace std;
 
 class Anillo{
     public:
-    // Constructor default
+    // Constructor default 
     Anillo(){
         material = 0;
         talla = 0;
@@ -25,6 +25,7 @@ class Anillo{
     }
 
     private:
+    // Atributos
     int material; // Material del anillo
     int talla; // Talla del anillo
     float precio; // Precio del anillo
@@ -32,6 +33,7 @@ class Anillo{
     int diamante; // Diamante del anillo
     int num_diamantes; // Numero de diamantes
 
+    // Métodos
     void selMaterial () { // Seleccionar Material
         cout << "Elige el material de tu anillo.\n"
         << "\t 1. Oro amarillo\n"
