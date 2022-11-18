@@ -3,4 +3,4 @@ Documentación de mi proyecto para la materia Pensamiento Computacional Orientad
 
 El proyecto trata de una joyería que vende distintas joyas personalizables.
 El usuario puede ingresar sus preferencias y el programa calcula el precio según estas. 
-El programa muestra al usuario el precio de la joya con las características que escoguieron. 
+El programa muestra al usuario el precio de la joya con las características que escogieron. 
