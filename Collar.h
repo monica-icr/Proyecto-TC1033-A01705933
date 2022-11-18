@@ -24,6 +24,9 @@ class Collar{
         if (num_cadenas < 1 || num_cadenas > 5){
             precio = 0;
         }
+        if ( precio > 1) {
+            precio = precio + mano_obra;
+        }
         cout << "El precio de tu collar es: "
         << precio << endl;
     }
@@ -35,6 +38,7 @@ class Collar{
     float precio; // Precio del collar
     int num_figura; // Numero de figura
     string figura; // Figura del collar
+    float mano_obra; // Precio de la mano de obra
 
     void selMaterial () { // Seleccionar Material
         cout << "Elige el material de tu collar.\n"
