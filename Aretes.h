@@ -12,6 +12,7 @@ class Aretes{
         figura = "";
         diamante = 0;
         num_diamantes = 0;
+        mano_obra = 150;
     }
     void precioAretes(){ // Calcular precio de los aretes
         selMaterial();
@@ -26,6 +27,9 @@ class Aretes{
                 break;
             default: precio = 0;
         }
+        if ( precio > 1) {
+            precio = precio + mano_obra;
+        }
         cout << "El precio de tus aretes es: "
         << precio << endl;
     }
@@ -37,6 +41,7 @@ class Aretes{
     int diamante; // Diamantes de los aretes
     int num_diamantes; // Número de diamantes
     float precio; // Precio de los aretes
+    float mano_obra; // Precio de la mano de obra
 
     void selMaterial () { // Seleccionar Material
         cout << "Elige el material de tus aretes.\n"
