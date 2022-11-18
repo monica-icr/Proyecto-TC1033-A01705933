@@ -36,7 +36,7 @@ class Anillo{
     float precio_m; // Precio del material
     int diamante; // Diamante del anillo
     int num_diamantes; // Numero de diamantes
-    float mano_obra;
+    float mano_obra; // Precio de la mano de obra
 
     // Métodos
     void selMaterial () { // Seleccionar Material
