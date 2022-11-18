@@ -12,6 +12,7 @@ class Collar{
         precio = 0;
         num_figura = 0;
         figura = "";
+        mano_obra = 250;
     }
     void precioCollar() { // Precio Collar
         selMaterial();
