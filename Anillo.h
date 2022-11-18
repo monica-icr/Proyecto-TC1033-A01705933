@@ -9,6 +9,7 @@ class Anillo{
         material = 0;
         talla = 0;
         diamante = 0;
+        mano_obra = 200;
     }
     // Precio Anillo
     void precioAnillo(){
@@ -19,6 +20,9 @@ class Anillo{
         precio = precio_m;
         if ( diamante == 1 ) {
             precio = precio + (num_diamantes * 1000);
+        }
+        if ( precio > 1) {
+            precio = precio + mano_obra;
         }
         cout << "El precio de tu anillo es:"
         << precio << endl;
@@ -32,6 +36,7 @@ class Anillo{
     float precio_m; // Precio del material
     int diamante; // Diamante del anillo
     int num_diamantes; // Numero de diamantes
+    float mano_obra;
 
     // Métodos
     void selMaterial () { // Seleccionar Material
