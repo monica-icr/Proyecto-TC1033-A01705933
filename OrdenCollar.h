@@ -4,11 +4,11 @@
 #include <string>
 using namespace std;
 #include "Orden.h"
-#include "Collar2.h"
+#include "Collar.h"
 #include "Cliente.h"
 
 class OrdenCollar: public Orden{
-    protected: 
+    private: 
         float precio_total;
         vector<Collar> collares;
         vector<Cliente> clientes;
@@ -17,6 +17,7 @@ class OrdenCollar: public Orden{
     OrdenCollar(): Orden(){
         collares = vector<Collar>();
         clientes = vector<Cliente>();
+        precio_total = 0;
     }
     // Setters
     void setCollares(vector<Collar> co){
@@ -26,33 +27,30 @@ class OrdenCollar: public Orden{
         clientes = cl;
     }
     // Otros métodos
-    void agregarCollar(Collar col){
-        collares.push_back(col);
-    }
-    void agregarCliente(Cliente cli){
-        clientes.push_back(cli);
-    }
     void imprimirOrden(){
-        cout<< "ORDEN:"<<endl;
+          cout<< "ORDEN:"<<endl;
         for (int i = 0; i < clientes.size(); i++){
-            cout <<"\t Cliente: " << clientes[i].nombre
-            <<" "<< clientes[i].apellido<< endl
-            <<"\t Contacto: "<< clientes[i].telefono<<endl;
-            cout<<"\t\t"<<clientes[i].correo<<endl;
+            cout <<"\t Cliente: " << clientes[i].getNombre()
+            <<" "<< clientes[i].getApellido()<< endl
+            <<"\t Contacto: "<< clientes[i].getTelefono()<<endl;
+            cout<<"\t\t"<<clientes[i].getCorreo()<<endl;
         }
         for (int i = 0; i < collares.size(); i++){
             cout<<"\n\t Pedido: COLLAR"<<endl;
             cout<<"\t Características:"<<endl;
-            cout<<"\t\t Material: "<< collares[i].material<<endl;
-            cout<<"\t\t Figura: "<< collares[i].figura<<endl;
-            cout<<"\t\t Cadenas: "<< collares[i].cadena<<endl;
+            cout<<"\t\t Material: "<< collares[i].getMaterial()<<endl;
+            cout<<"\t\t Figura: "<< collares[i].getFigura()<<endl;
+            cout<<"\t\t Cadenas: "<< collares[i].getCadenas()<<endl;
             cout<<"\t\t Precio: "<< collares[i].calcularPrecio()<<endl;
         }
         for (int i = 0; i < collares.size(); i++){
-            precio_total = 0;
             precio_total = precio_total + collares[i].calcularPrecio();
         }
+        cout << "\t Método de Pago: "<<metodo_pago<<endl;
         cout<<"\t Precio total: "<< precio_total<<endl;
+        cout <<"\tSu orden llegará en 20 días habiles a la dirección: "
+        <<direccion<<endl;
+        precio_total = 0;
     }
 };
 
