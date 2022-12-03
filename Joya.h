@@ -11,6 +11,7 @@ class Joya {
         int num_material;
         float mano_obra;
         float precio;
+    public:
     // Constructor default
     Joya(){
         material = " ";
