@@ -54,7 +54,7 @@ vector<Collar> crearCollar(){
     cin >> num_collares;
     for (int i = 0; i < num_collares; i++){
         Collar mi_collar;
-        cout << "Personalizemos su collar #" << i+1 << endl;
+        cout << "\n\nPersonalizemos su collar #" << i+1 << endl;
         cout << "\n ESCOGE UN MATERIAL: " << endl;
         int num_material;
         num_material = menuMaterial();
@@ -138,7 +138,7 @@ vector<Anillo> crearAnillo(){
     cin >> num_anillos;
     for (int i = 0; i < num_anillos; i++){
         Anillo mi_anillo;
-        cout << "Personalizemos su anillo # " << i+1 << endl;
+        cout << "\n\nPersonalizemos su anillo # " << i+1 << endl;
         cout << "\nESCOGE UN MATERIAL " << endl;
         string material;
         int num_material;
@@ -269,9 +269,9 @@ int menu(){
     int num_clientes;
     loop = true;
     while (loop){
-        cout << "MENU" << endl;
-        cout << "\t1. Realizar orden" << endl;
-        cout << "\t2. Salir" << endl;
+        cout << "\n\tMENU" << endl;
+        cout << "1. Realizar orden" << endl;
+        cout << "2. Salir" << endl;
         cin >> opcion;
         if (opcion == 1 || opcion == 2){
             loop = false;
@@ -291,6 +291,10 @@ int main(){
     int num_clientes;
     loop = true;
     Fecha fecha_orden;
+    cout << "\n\n\tB I E N V E N I D O S " << endl;
+    cout << "\nEsta es la joyería MONISA" << endl;
+    cout << "Aquí encontrarás las mejores joyas" 
+    << " adecuadas a TU gusto"<< endl;
     while (loop){
         int opcion = menu();
         if (opcion == 1){
@@ -303,6 +307,9 @@ int main(){
             cout << "Ingrese el método de pago: " << endl;
             string metodo_pago;
             cin >> metodo_pago;
+            cout << "Ingrese la dirección de envío: " << endl;
+            string direccion_envio;
+            cin >> direccion_envio;
             opcion_joya = menuJoyas();
             if (opcion_joya == 1){
                 vector <Anillo> mis_anillos;
@@ -313,6 +320,7 @@ int main(){
                 mis_anillos = crearAnillo();
                 nueva_orden.setAnillos(mis_anillos);
                 nueva_orden.setClientes(mis_clientes);
+                nueva_orden.setDireccion(direccion_envio);
                 nueva_orden.imprimirOrden();
             }else if(opcion_joya == 2){
                 vector <Collar> mis_collares;
@@ -323,13 +331,14 @@ int main(){
                 mis_collares = crearCollar();
                 nueva_orden.setCollares(mis_collares);
                 nueva_orden.setClientes(mis_clientes);
+                nueva_orden.setDireccion(direccion_envio);
                 nueva_orden.imprimirOrden();
             }else{
                 cout<< "Opción inválida, vuelva a intentarlo" << endl;
             }
         }
         else if (opcion == 2){
-            cout << "Gracias por usar el programa" << endl;
+            cout << "Gracias por su compra en MONISA" << endl;
             loop = false;
         }
     }
