@@ -5,7 +5,7 @@ using namespace std;
 #include <string>
 
 class Joya {  
-    public:
+    protected:
     // Atributos
         string material;
         int num_material;
