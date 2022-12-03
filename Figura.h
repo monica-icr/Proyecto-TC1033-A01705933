@@ -6,7 +6,7 @@ using namespace std;
 #include "Joya.h"
 
 class Figura: public Joya {
-    public:
+    protected:
      // Atributos
         string figura;
         int num_figura;
