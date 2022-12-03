@@ -9,13 +9,12 @@ class Orden {
     protected:
         Fecha fecha;
         string metodo_pago;
-        string direccion;
+        Direccion direccion;
     public:
     // Constructor default
     Orden(){
         fecha = Fecha();
         metodo_pago = "";
-        direccion = "";
     }
     // Setters
     void setFecha(Fecha f){
@@ -24,7 +23,7 @@ class Orden {
     void setMetodoPago(string met_pag){
         metodo_pago = met_pag;
     }
-    void setDireccion(string dir){
+    void setDireccion(Direccion dir){
         direccion = dir;
     }
     // Getters
@@ -34,7 +33,7 @@ class Orden {
     string getMetodoPago(){
         return metodo_pago;
     }
-    string getDireccion(){
+    Direccion getDireccion(){
         return direccion;
     }
 };
