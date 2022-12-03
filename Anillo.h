@@ -34,15 +34,15 @@ class Anillo: public Diamante{
     // Otros métodos
     float calcularPrecio(){
         switch(num_material){
-            case 1: precio = 3000;
+            case 1: precio = 2000;
                 break;
-            case 2: precio = 2500;
+            case 2: precio = 1500;
                 break;
-            case 3: precio = 2000;
+            case 3: precio = 1000;
                 break;
-            case 4: precio = 2500;
+            case 4: precio = 1500;
                 break;
-            case 5: precio = 3000;
+            case 5: precio = 2000;
                 break;
             default: precio = 0;
         }
