@@ -49,7 +49,10 @@ class OrdenCollar: public Orden{
         cout << "\t Método de Pago: "<<metodo_pago<<endl;
         cout<<"\t Precio total: "<< precio_total<<endl;
         cout <<"\tSu orden llegará en 20 días habiles a la dirección: "
-        <<direccion<<endl;
+        <<direccion.getCalle()<<" "<< direccion.getNumero()
+        <<" "<<direccion.getColonia()<<" "<<direccion.getCiudad()
+        <<" "<<direccion.getEstado()<<" CP: "<<direccion.getCP()
+        <<endl;
         precio_total = 0;
     }
 };
