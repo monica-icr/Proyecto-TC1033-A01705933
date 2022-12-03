@@ -1,12 +1,12 @@
-#ifndef COLLAR2_H
-#define COLLAR2_H
+#ifndef COLLAR_H
+#define COLLAR_H
 #include <iostream>
 #include <string>
 using namespace std;
 #include "Figura.h"
 
 class Collar: public Figura{
-    public:
+    private:
         int cadena;
     public: 
     // Constructor default
