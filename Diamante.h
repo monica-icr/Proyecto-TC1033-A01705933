@@ -6,7 +6,7 @@ using namespace std;
 #include "Joya.h"
 
 class Diamante: public Joya {
-    public: 
+    protected: 
      // Atributos
         bool diamante;
         int num_diamantes;
