@@ -5,7 +5,7 @@
 using namespace std;
 
 class Fecha {
-    public:
+    private:
         // Atributos
         int dia;
         int mes;
