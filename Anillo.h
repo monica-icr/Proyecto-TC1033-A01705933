@@ -1,12 +1,12 @@
-#ifndef ANILLO2_H
-#define ANILLO2_H
+#ifndef ANILLO_H
+#define ANILLO_H
 #include <iostream>
 #include <string>
 using namespace std;
 #include "Diamante.h"
 
 class Anillo: public Diamante{
-    public:
+    private:
     // Atributos
         int talla;
         int num_talla; 
