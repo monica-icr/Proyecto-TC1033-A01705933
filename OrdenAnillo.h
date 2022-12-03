@@ -55,7 +55,10 @@ class OrdenAnillo: public Orden{
             cout<<"\t Metodo de pago: "<< metodo_pago<<endl;
             cout<<"\t Precio total: "<< precio_total<<endl;
             cout<<"\t Su orden llegará en 20 días hábiles a la dirección: "
-            <<direccion<<endl;
+            <<direccion.getCalle()<<" "<< direccion.getNumero()
+            <<" "<<direccion.getColonia()<<" "<<direccion.getCiudad()
+            <<" "<<direccion.getEstado()<<" CP: "<<direccion.getCP()
+            <<endl;
             precio_total = 0;
         }
 }; 
