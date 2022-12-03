@@ -10,6 +10,7 @@ class Orden {
         Fecha fecha;
         string metodo_pago;
         string direccion;
+    public:
     // Constructor default
     Orden(){
         fecha = Fecha();
