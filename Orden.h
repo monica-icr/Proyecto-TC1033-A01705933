@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 #include "Fecha.h"
+#include "Direccion.h"
 
 class Orden {
     protected:
