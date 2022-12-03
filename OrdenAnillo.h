@@ -13,6 +13,7 @@ class OrdenAnillo: public Orden{
         float precio_total;
         vector<Anillo> anillos;
         vector<Cliente> clientes;
+    public:
         // Constructor default
         OrdenAnillo(): Orden(){
             anillos = vector<Anillo>();
