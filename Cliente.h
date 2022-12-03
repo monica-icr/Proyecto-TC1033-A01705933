@@ -6,7 +6,7 @@ using namespace std;
 
 class Cliente {
        
-    public: 
+    private: 
     // Atributos
         string nombre;
         string apellido;
