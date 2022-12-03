@@ -10,7 +10,7 @@ class Cliente {
     // Atributos
         string nombre;
         string apellido;
-        int telefono;
+        long long int telefono;
         string correo;
     public:
         // Constructor default
@@ -34,7 +34,7 @@ class Cliente {
         void setApellido(string ape){
             apellido = ape;
         }
-        void setTelefono(int tel){
+        void setTelefono(long long int tel){
             telefono = tel;
         }
         void setCorreo(string cor){
