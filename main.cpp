@@ -14,15 +14,15 @@ Direccion creaDireccion(){
     string estado;
     int cp;
     cout << "Calle: ";
-    cin >> calle;
+    getline(cin >> cw, calle);
     cout << "Numero: ";
     cin >> numero;
     cout << "Colonia: ";
-    cin >> colonia;
+    getline(cin >> cw, colonia);
     cout << "Ciudad: ";
-    cin >> ciudad;
+    getline(cin >> cw, ciudad);
     cout << "Estado: ";
-    cin >> estado;
+    getline(cin >> cw, estado);
     cout << "CP: ";
     cin >> cp;
     mi_direccion.setCalle(calle);
@@ -278,16 +278,16 @@ vector<Cliente> cantidadClientes(int num_clientes){
     for (int i = 0; i < num_clientes; i++){
         cout << "Nombre del cliente # "<<i+1<<": " << endl;
         string nombre;
-        cin >> nombre;
+        getline(cin >> cw, nombre);
         cout << "Apellido del cliente: " << endl;
         string apellido;
-        cin >> apellido;
+        getline(cin >> cw, apellido);
         cout << "Teléfono del cliente: " << endl;
         long long int telefono;
         cin >> telefono;
         cout << "Correo del cliente: " << endl;
         string correo;
-        cin >> correo;
+        getline(cin >> cw, correo);
         Cliente nuevo_cliente;
         nuevo_cliente.setNombre(nombre);
         nuevo_cliente.setApellido(apellido);
@@ -344,7 +344,7 @@ int main(){
             fecha_orden = creaFecha();
             cout << "Ingrese el método de pago: " << endl;
             string metodo_pago;
-            cin >> metodo_pago;
+            getline(cin >> cw, metodo_pago);
             cout << "Ingrese la dirección de envío: " << endl;
             Direccion direccion_envio;
             direccion_envio = creaDireccion();
@@ -371,6 +371,9 @@ int main(){
                 nueva_orden.setClientes(mis_clientes);
                 nueva_orden.setDireccion(direccion_envio);
                 nueva_orden.imprimirOrden();
+            }else if (opcion_joya == 3){
+                cout <<"Gracias por su visita" << endl;
+                loop = false;
             }else{
                 cout<< "Opción inválida, vuelva a intentarlo" << endl;
             }
