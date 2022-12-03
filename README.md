@@ -9,3 +9,5 @@ La joyería Monisa busca poder proveer joyas personalizables, donde el cliente p
 El objetivo del programa es tener una interfaz dónde los usuarios puedan realizar sus elecciones y se les muestre las características de su orden. 
 
 Para lograr esto el programa cuenta con distintas clases que albergan las distintas características de cada Joya, también cuenta con clases Orden que estan compuestas por otras clases como Cliente, las clases de joyas previamente mencionadas, Fecha, etc... A través de estas clases se guardan los atributos que el usuario proporciona a través de interacciones con los distintos menus del main y se utilizan para calcular el precio final de la orden del cliente. 
+
+Nota: El UML está en archivo UML FINAL (1)
