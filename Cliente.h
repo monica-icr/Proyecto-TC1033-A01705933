@@ -20,13 +20,6 @@ class Cliente {
             telefono = 0;
             correo = "";
         }
-        // Constructor con parametros
-        Cliente(string nom, string ape, int tel, string cor){
-            nombre = nom;
-            apellido = ape;
-            telefono = tel;
-            correo = cor;
-        }
         // Setters
         void setNombre(string nom){
             nombre = nom;
