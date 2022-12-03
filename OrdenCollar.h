@@ -33,7 +33,7 @@ class OrdenCollar: public Orden{
             cout <<"\t Cliente: " << clientes[i].getNombre()
             <<" "<< clientes[i].getApellido()<< endl
             <<"\t Contacto: ";
-            cout<<"\t\t"<<clientes[i].getCorreo()<<endl;
+            cout<<clientes[i].getCorreo()<<endl;
         }
         for (int i = 0; i < collares.size(); i++){
             cout<<"\n\t Pedido: COLLAR"<<endl;
