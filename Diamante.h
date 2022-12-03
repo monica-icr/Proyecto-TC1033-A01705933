@@ -10,6 +10,7 @@ class Diamante: public Joya {
      // Atributos
         bool diamante;
         int num_diamantes;
+    public:
     // Constructor default
     Diamante(): Joya(){
         diamante = false;
