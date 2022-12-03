@@ -10,7 +10,7 @@ class Anillo: public Diamante{
     // Atributos
         int talla;
         int num_talla; 
-    
+    public:
     // Constructor default
     Anillo(): Diamante(){
         talla = 0;
