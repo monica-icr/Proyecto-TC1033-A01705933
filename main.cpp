@@ -247,7 +247,7 @@ vector<Cliente> cantidadClientes(int num_clientes){
         string apellido;
         cin >> apellido;
         cout << "Teléfono del cliente: " << endl;
-        int telefono;
+        long long int telefono;
         cin >> telefono;
         cout << "Correo del cliente: " << endl;
         string correo;
