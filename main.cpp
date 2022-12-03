@@ -14,15 +14,15 @@ Direccion creaDireccion(){
     string estado;
     int cp;
     cout << "Calle: ";
-    getline(cin >> cw, calle);
+    getline(cin >> ws, calle);
     cout << "Numero: ";
     cin >> numero;
     cout << "Colonia: ";
-    getline(cin >> cw, colonia);
+    getline(cin >> ws, colonia);
     cout << "Ciudad: ";
-    getline(cin >> cw, ciudad);
+    getline(cin >> ws, ciudad);
     cout << "Estado: ";
-    getline(cin >> cw, estado);
+    getline(cin >> ws, estado);
     cout << "CP: ";
     cin >> cp;
     mi_direccion.setCalle(calle);
@@ -278,16 +278,16 @@ vector<Cliente> cantidadClientes(int num_clientes){
     for (int i = 0; i < num_clientes; i++){
         cout << "Nombre del cliente # "<<i+1<<": " << endl;
         string nombre;
-        getline(cin >> cw, nombre);
+        getline(cin >> ws, nombre);
         cout << "Apellido del cliente: " << endl;
         string apellido;
-        getline(cin >> cw, apellido);
+        getline(cin >> ws, apellido);
         cout << "Teléfono del cliente: " << endl;
         long long int telefono;
         cin >> telefono;
         cout << "Correo del cliente: " << endl;
         string correo;
-        getline(cin >> cw, correo);
+        getline(cin >> ws, correo);
         Cliente nuevo_cliente;
         nuevo_cliente.setNombre(nombre);
         nuevo_cliente.setApellido(apellido);
@@ -344,7 +344,7 @@ int main(){
             fecha_orden = creaFecha();
             cout << "Ingrese el método de pago: " << endl;
             string metodo_pago;
-            getline(cin >> cw, metodo_pago);
+            getline(cin >> ws, metodo_pago);
             cout << "Ingrese la dirección de envío: " << endl;
             Direccion direccion_envio;
             direccion_envio = creaDireccion();
