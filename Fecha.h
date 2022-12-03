@@ -10,6 +10,7 @@ class Fecha {
         int dia;
         int mes;
         int anio;
+    public:
         // Constructor default
         Fecha(){
             dia = 0;
