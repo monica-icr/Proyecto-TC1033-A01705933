@@ -4,7 +4,38 @@ using namespace std;
 #include "OrdenAnillo.h"
 #include "OrdenCollar.h"
 
+Direccion creaDireccion(){
+    // Esta función crea una dirección y la regresa
+    Direccion mi_direccion;
+    string calle;
+    int numero;
+    string colonia;
+    string ciudad;
+    string estado;
+    int cp;
+    cout << "Calle: ";
+    cin >> calle;
+    cout << "Numero: ";
+    cin >> numero;
+    cout << "Colonia: ";
+    cin >> colonia;
+    cout << "Ciudad: ";
+    cin >> ciudad;
+    cout << "Estado: ";
+    cin >> estado;
+    cout << "CP: ";
+    cin >> cp;
+    mi_direccion.setCalle(calle);
+    mi_direccion.setNumero(numero);
+    mi_direccion.setColonia(colonia);
+    mi_direccion.setCiudad(ciudad);
+    mi_direccion.setEstado(estado);
+    mi_direccion.setCP(cp);
+    return mi_direccion;
+}
+
 Fecha creaFecha(){
+    // Esta función crea una fecha y la regresa
     Fecha f;
     cout << "Ingrese la fecha de la orden: " << endl;
     int dia;
@@ -24,6 +55,7 @@ Fecha creaFecha(){
 }
 
 int menuMaterial(){
+    // Esta función muestra el menú de materiales y regresa la opción elegida
     bool loop;
     loop = true;
     int num_material;
@@ -48,6 +80,7 @@ int menuMaterial(){
 }
 
 vector<Collar> crearCollar(){
+    // Esta función crea una lista de collares y la regresa
     vector<Collar> mis_collares;
     int num_collares;
     cout << "¿Cuántos collares desea ordenar?" << endl;
@@ -132,6 +165,7 @@ vector<Collar> crearCollar(){
 }
 
 vector<Anillo> crearAnillo(){
+    // Esta función crea una lista de anillos y la regresa
     vector<Anillo> mis_anillos;
     cout << "¿Cuántos anillos desea ordenar?" << endl;
     int num_anillos;
@@ -218,6 +252,7 @@ vector<Anillo> crearAnillo(){
     return mis_anillos;
 }
 int menuJoyas(){
+    // Esta función despliega el menú de joyas y regresa la opción elegida
     int opcion;
     bool loop;
     loop = true;
@@ -238,6 +273,7 @@ int menuJoyas(){
 }
 
 vector<Cliente> cantidadClientes(int num_clientes){
+    // Esta función crea una lista de clientes y la regresa
     vector <Cliente> mis_clientes; 
     for (int i = 0; i < num_clientes; i++){
         cout << "Nombre del cliente # "<<i+1<<": " << endl;
@@ -264,6 +300,7 @@ vector<Cliente> cantidadClientes(int num_clientes){
 
 
 int menu(){
+    // Esta función despliega el menú principal y regresa la opción elegida
     int opcion; 
     bool loop;
     int num_clientes;
@@ -285,6 +322,7 @@ int menu(){
 }
 
 int main(){
+    // Esta función es la principal y llama a las demás funciones
     bool loop;
     int opcion;
     int opcion_joya;
@@ -308,8 +346,8 @@ int main(){
             string metodo_pago;
             cin >> metodo_pago;
             cout << "Ingrese la dirección de envío: " << endl;
-            string direccion_envio;
-            cin >> direccion_envio;
+            Direccion direccion_envio;
+            direccion_envio = creaDireccion();
             opcion_joya = menuJoyas();
             if (opcion_joya == 1){
                 vector <Anillo> mis_anillos;
