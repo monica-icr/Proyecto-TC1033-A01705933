@@ -10,6 +10,7 @@ class Figura: public Joya {
      // Atributos
         string figura;
         int num_figura;
+    public:
     // Constructor default
     Figura(): Joya(){
         figura = "";
