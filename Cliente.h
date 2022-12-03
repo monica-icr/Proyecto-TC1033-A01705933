@@ -12,6 +12,7 @@ class Cliente {
         string apellido;
         int telefono;
         string correo;
+    public:
         // Constructor default
         Cliente(){
             nombre = "";
