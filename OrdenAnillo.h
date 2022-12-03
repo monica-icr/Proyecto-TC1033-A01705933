@@ -34,7 +34,7 @@ class OrdenAnillo: public Orden{
                 cout <<"\t Cliente: " << clientes[i].getNombre()
                 <<" "<< clientes[i].getApellido()<< endl;
                 cout <<"\t Contacto: ";
-                cout <<"\t\t"<<clientes[i].getCorreo()<<endl;
+                cout <<clientes[i].getCorreo()<<endl;
             }
             for (int i = 0; i < anillos.size(); i++){
                 cout<<"\n\t Pedido: ANILLO"<<endl;
